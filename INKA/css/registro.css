@@ -1,0 +1,278 @@
+
+:root{
+    --pink:#FFC0CB;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Theano Didot';
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+
+/*Menu*/
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #000000;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+
+header{
+    position: inherit;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #000000;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo{
+    font-size: 4rem;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color: black;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 4px;
+}
+
+header .navbar a:hover{
+    background: var(--pink);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+header .icons a{
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color: var(--pink);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-family: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: 1rem solid rgba(0, 0, 0, .3);
+    display: none;
+}
+/*Final del menu*/
+
+/*reponcin*/
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width:768px){
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: relative;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: 1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+/*Final reponcin*/
+
+.body1 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+form {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 35px 35px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 380px;
+    background-color: #fefefe;
+
+}
+
+form h2 {
+    font-size: 35px;
+    color: #0d0d0d;
+    margin: 0;
+
+}
+
+form p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 35px;
+
+}
+
+.input-wrapper {
+    position: relative;
+    width: 305px;
+    margin-bottom: 35px;
+
+}
+
+input {
+    color: #0d0d0d;
+    padding: 20px 15px 20px 60px;
+    width: 100%;
+    border-radius: 25px;
+    border: 0;
+    box-shadow: 0 0 20px rgb(192, 203, 251, 0.7);
+    outline: none;
+    font-size: 16px;
+
+}
+
+input::placeholder {
+    font-size: 16px;
+    color: #bbbbe2;
+
+}
+
+.input-icon {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-55%);
+
+}
+
+.btn {
+    padding: 20px;
+    background: linear-gradient(
+        90deg,
+        rgb(154, 49, 173) 25%,
+        #FFC0CB 100%);
+        box-shadow: 0 0 20px rgba(192, 203, 251, 0.7);
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        cursor: pointer;
+
+}
+
+.btn:hover {
+    background: rgb(11, 227, 130);
+
+}
+
+.success {
+    position: absolute;
+    top: 50px;
+    color: #00c83c;
+    font-size: 18px;
+    
+}
+
+.error {
+    position: absolute;
+    top: 50px;
+    color: #ff0000;
+    font-size: 18px;
+}
+
+@media(max-width:991px) {
+    boby {
+        padding: 10px;
+    }
+
+    form {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .input-wrapper {
+        position: relative;
+        width: 88%;
+        margin-bottom: 35px;
+    }
+
+    input {
+        padding: 20px 0px 20px 45px;
+    }
+
+    .input-icon {
+        height: 20px;
+        width: 20px;
+    }
+}

@@ -1,0 +1,196 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: .2s linear;
+  }
+  
+  html{
+    font-size: 62.5%;
+    scroll-behavior: smooth; /*Desplazamiento*/
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+  }
+  
+  
+  :root{
+    --pink:#ffc0cbc0;
+  }
+  
+  body {
+  font-family: 'Poppins', sans-serif;
+  }
+  /*Menu*/
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  }
+  
+  .section{
+    padding: 2rem 9%;
+  }
+  
+  
+  header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  }
+  
+  header .logo{
+    font-size: 4rem;
+    color: #000000;
+    font-weight: bolder;
+  }
+  
+  header .logo span{
+    color: black;
+    width: 20px;
+    height: 15px;
+  }
+  
+  header .navbar a{
+    font-size: 2rem;
+    color: #000000;
+    padding: 12px 20px;
+    border-radius: 4px;
+  }
+  
+  header .navbar a:hover{
+    background: var(--pink);
+    color: #000000;
+    transform: scale(1.1);
+  }
+  
+  header #toggler{
+    display: none;
+  }
+  
+  /*Menu desplegable*/
+  .dropdown {
+    display: inline-block;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+  }
+  .prop{
+    background: 0; right: 0;
+    background: #ffffff00;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 150%;
+    height: 900%;
+    text-align: left;
+    overflow: auto;
+    background: #fff;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    border: 0;
+  }
+  .dropdown-content a {
+    font-size: 2rem;
+    color: #567;
+    width: 100%;
+  }
+  
+  .navbar .dropdown-content a:hover{
+    color: #000;
+    background: #FFC0CB;
+    padding: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+  }
+  /*fin*/
+
+  .baner{
+    background-image: url("../img/fotomia.jpeg");
+  }
+  /*Final del menu*/
+  .aja {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: aliceblue;
+  }
+  
+  #wrapper {
+    width: 100%;
+    max-width: 1150px;
+    position: relative;
+    
+  }
+  
+  #carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #carousel::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  #prev,
+  #next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: rgb(61, 144, 217);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    position: absolute;
+    cursor: pointer;
+  }
+  
+  #prev {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+  
+  #next {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  #content {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+  }
+  
+  .item {
+    width: 180px;
+    height: 180px;
+    background: green;
+  }
+  
